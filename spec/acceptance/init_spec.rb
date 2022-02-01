@@ -5,9 +5,9 @@ require 'spec_helper_acceptance'
 describe 'helm_binary class' do
   context 'without any parameters', :cleanup_opt do
     let(:pp) do
-      <<-EOS
+      <<-PP
       include helm_binary
-      EOS
+      PP
     end
 
     it_behaves_like 'an idempotent resource'
@@ -52,11 +52,11 @@ describe 'helm_binary class' do
     basedir = default.tmpdir('helm')
 
     let(:pp) do
-      <<-EOS
+      <<-PP
       class { helm_binary:
         base_path => '#{basedir}',
       }
-      EOS
+      PP
     end
 
     it_behaves_like 'an idempotent resource'
@@ -99,12 +99,12 @@ describe 'helm_binary class' do
 
   context 'with version related params' do
     let(:pp) do
-      <<-EOS
+      <<-PP
       class { helm_binary:
         version  => '3.5.4',
         checksum => 'a8ddb4e30435b5fd45308ecce5eaad676d64a5de9c89660b56face3fe990b318',
       }
-      EOS
+      PP
     end
 
     it_behaves_like 'an idempotent resource'
