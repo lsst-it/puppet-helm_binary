@@ -4,7 +4,7 @@ require 'spec_helper_acceptance'
 
 describe 'helm_binary class' do
   context 'without any parameters', :cleanup_opt do
-    let(:pp) do
+    let(:manifest) do
       <<-PP
       include helm_binary
       PP
@@ -51,7 +51,7 @@ describe 'helm_binary class' do
   context 'with base_path param' do
     basedir = default.tmpdir('helm')
 
-    let(:pp) do
+    let(:manifest) do
       <<-PP
       class { helm_binary:
         base_path => '#{basedir}',
@@ -98,7 +98,7 @@ describe 'helm_binary class' do
   end
 
   context 'with version related params' do
-    let(:pp) do
+    let(:manifest) do
       <<-PP
       class { helm_binary:
         version  => '3.5.4',
