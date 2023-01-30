@@ -18,12 +18,12 @@ Install Helm binary
 
 The following parameters are available in the `helm_binary` class:
 
-* [`version`](#version)
-* [`checksum`](#checksum)
-* [`checksum_type`](#checksum_type)
-* [`base_path`](#base_path)
+* [`version`](#-helm_binary--version)
+* [`checksum`](#-helm_binary--checksum)
+* [`checksum_type`](#-helm_binary--checksum_type)
+* [`base_path`](#-helm_binary--base_path)
 
-##### <a name="version"></a>`version`
+##### <a name="-helm_binary--version"></a>`version`
 
 Data type: `String`
 
@@ -31,7 +31,7 @@ Helm release version
 
 Default value: `'3.7.2'`
 
-##### <a name="checksum"></a>`checksum`
+##### <a name="-helm_binary--checksum"></a>`checksum`
 
 Data type: `String`
 
@@ -39,7 +39,7 @@ Artifact checksum string
 
 Default value: `'4ae30e48966aba5f807a4e140dad6736ee1a392940101e4d79ffb4ee86200a9e'`
 
-##### <a name="checksum_type"></a>`checksum_type`
+##### <a name="-helm_binary--checksum_type"></a>`checksum_type`
 
 Data type: `String`
 
@@ -47,7 +47,7 @@ The digest algorithm used for the checksum string.
 
 Default value: `'sha256'`
 
-##### <a name="base_path"></a>`base_path`
+##### <a name="-helm_binary--base_path"></a>`base_path`
 
 Data type: `Stdlib::Absolutepath`
 
