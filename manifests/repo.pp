@@ -3,7 +3,7 @@
 # @param debian_apt_source apt details of the repo, see hiera
 #
 class helm_binary::repo (
-  String $debian_apt_source,
+  Hash $debian_apt_source,
 ) {
   case fact('os.family') {
     'Debian': {
