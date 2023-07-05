@@ -83,10 +83,15 @@ class helm_binary (
       }
     }
     'package': {
-      include helm_binary::repo
+      case fact('os.name') {
+        'Debian', 'Ubuntu', 'Fedora': {
+          include helm_binary::repo
 
-      package { 'helm':
-        ensure => $package_ensure,
+          package { 'helm':
+            ensure => $package_ensure,
+          }
+        }
+        default: {}
       }
     }
     default: {}
