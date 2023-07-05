@@ -11,8 +11,6 @@ class helm_binary::repo (
         * => $debian_apt_source,
       }
     }
-    default: {
-      notify { "OS family #{fact('os.family')} not supported": }
-    }
+    default: {}
   }
 }
