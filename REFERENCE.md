@@ -7,6 +7,7 @@
 ### Classes
 
 * [`helm_binary`](#helm_binary): Install Helm binary
+* [`helm_binary::repo`](#helm_binary--repo): Class: helm_binary::repo
 
 ## Classes
 
@@ -22,6 +23,9 @@ The following parameters are available in the `helm_binary` class:
 * [`checksum`](#-helm_binary--checksum)
 * [`checksum_type`](#-helm_binary--checksum_type)
 * [`base_path`](#-helm_binary--base_path)
+* [`packaging`](#-helm_binary--packaging)
+* [`package_ensure`](#-helm_binary--package_ensure)
+* [`archive_base_url`](#-helm_binary--archive_base_url)
 
 ##### <a name="-helm_binary--version"></a>`version`
 
@@ -54,4 +58,44 @@ Data type: `Stdlib::Absolutepath`
 Base path under which to install software.
 
 Default value: `'/opt/helm'`
+
+##### <a name="-helm_binary--packaging"></a>`packaging`
+
+Data type: `Enum['package', 'archive']`
+
+Use download or system packages
+
+Default value: `'archive'`
+
+##### <a name="-helm_binary--package_ensure"></a>`package_ensure`
+
+Data type: `String`
+
+Ensure state of the package, if used
+
+Default value: `'installed'`
+
+##### <a name="-helm_binary--archive_base_url"></a>`archive_base_url`
+
+Data type: `Stdlib::HTTPUrl`
+
+Url where to download from helm
+
+Default value: `'https://get.helm.sh'`
+
+### <a name="helm_binary--repo"></a>`helm_binary::repo`
+
+Class: helm_binary::repo
+
+#### Parameters
+
+The following parameters are available in the `helm_binary::repo` class:
+
+* [`debian_apt_source`](#-helm_binary--repo--debian_apt_source)
+
+##### <a name="-helm_binary--repo--debian_apt_source"></a>`debian_apt_source`
+
+Data type: `Hash`
+
+apt details of the repo, see hiera
 
