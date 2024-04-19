@@ -3,12 +3,14 @@
 # @param debian_apt_source apt details of the repo, see hiera
 #
 class helm_binary::repo (
-  Hash $debian_apt_source,
+  Hash $debian_apt_source = {},
 ) {
   case fact('os.family') {
     'Debian': {
-      apt::source { 'helm':
-        * => $debian_apt_source,
+      unless empty($debian_apt_source) {
+        apt::source { 'helm':
+          * => $debian_apt_source,
+        }
       }
     }
     default: {}

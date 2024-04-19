@@ -145,7 +145,6 @@ describe 'helm_binary class' do
     end
   end
 
-
   context 'with packaging set to package' do
     let(:manifest) do
       <<-PP
