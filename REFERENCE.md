@@ -99,3 +99,5 @@ Data type: `Hash`
 
 apt details of the repo, see hiera
 
+Default value: `{}`
+
