@@ -93,12 +93,10 @@ class helm_binary (
           }
         }
         'RedHat': {
-          include helm_binary::repo
-          # TODO: i know, packages and yum repo missing atm, but will fix this later, just to not forget about it
-
-          package { 'helm':
-            ensure  => $package_ensure,
-            # require => Class['yum::update'],
+          if fact('os.name') == 'Fedora' {
+            package { 'helm':
+              ensure  => $package_ensure,
+            }
           }
         }
         default: {}
