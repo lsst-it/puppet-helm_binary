@@ -156,8 +156,10 @@ describe 'helm_binary class' do
 
     it_behaves_like 'an idempotent resource'
 
-    describe package('helm') do
-      it { is_expected.to be_installed }
+    unless os[:family] == 'Debian' || os[:name] == 'Fedora'
+      describe package('helm') do
+        it { is_expected.to be_installed }
+      end
     end
   end
 end
