@@ -149,7 +149,7 @@ describe 'helm_binary class' do
     let(:manifest) do
       <<-PP
       class { helm_binary:
-        packageing => 'package',
+        packaging => 'package',
       }
       PP
     end
