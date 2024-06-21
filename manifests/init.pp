@@ -83,14 +83,22 @@ class helm_binary (
       }
     }
     'package': {
-      case fact('os.name') {
-        'Debian', 'Ubuntu', 'Fedora': {
+      case fact('os.family') {
+        'Debian': {
           include helm_binary::repo
 
-          Class['apt::update'] -> Package <| provider == 'apt' |>
+          package { 'helm':
+            ensure  => $package_ensure,
+            require => Class['apt::update'],
+          }
+        }
+        'RedHat': {
+          include helm_binary::repo
+          # TODO: i know, packages and yum repo missing atm, but will fix this later, just to not forget about it
 
           package { 'helm':
-            ensure => $package_ensure,
+            ensure  => $package_ensure,
+            # require => Class['yum::update'],
           }
         }
         default: {}
