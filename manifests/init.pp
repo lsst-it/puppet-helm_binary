@@ -87,6 +87,8 @@ class helm_binary (
         'Debian', 'Ubuntu', 'Fedora': {
           include helm_binary::repo
 
+          Class['apt::update'] -> Package <| provider == 'apt' |>
+
           package { 'helm':
             ensure => $package_ensure,
           }

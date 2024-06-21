@@ -11,8 +11,6 @@ class helm_binary::repo (
         apt::source { 'helm':
           * => $debian_apt_source,
         }
-
-        Class['apt::update'] -> Package <| provider == 'apt' |>
       }
     }
     default: {}
