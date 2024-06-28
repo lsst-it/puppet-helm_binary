@@ -144,4 +144,22 @@ describe 'helm_binary class' do
       it { is_expected.to be_linked_to '/opt/helm/3.5.4/bin/helm' }
     end
   end
+
+  context 'with packaging set to package' do
+    let(:manifest) do
+      <<-PP
+      class { helm_binary:
+        packaging => 'package',
+      }
+      PP
+    end
+
+    it_behaves_like 'an idempotent resource'
+
+    if os[:family] == 'Debian' || os[:name] == 'Fedora'
+      describe package('helm') do
+        it { is_expected.to be_installed }
+      end
+    end
+  end
 end
