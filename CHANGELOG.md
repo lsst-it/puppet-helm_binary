@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.0.0](https://github.com/lsst-it/puppet-helm_binary/tree/v3.0.0) (2024-06-28)
+
+[Full Changelog](https://github.com/lsst-it/puppet-helm_binary/compare/v2.1.0...v3.0.0)
+
+**Breaking changes:**
+
+- Add possibillity to install via package [\#20](https://github.com/lsst-it/puppet-helm_binary/pull/20) ([rwaffen](https://github.com/rwaffen))
+
+**Implemented enhancements:**
+
+- \(puppet-helm-binary\) add license [\#21](https://github.com/lsst-it/puppet-helm_binary/pull/21) ([dtapiacl](https://github.com/dtapiacl))
+
 ## [v2.1.0](https://github.com/lsst-it/puppet-helm_binary/tree/v2.1.0) (2023-08-22)
 
 [Full Changelog](https://github.com/lsst-it/puppet-helm_binary/compare/v2.0.0...v2.1.0)
