@@ -95,7 +95,7 @@ class helm_binary (
         'RedHat': {
           if fact('os.name') == 'Fedora' {
             package { 'helm':
-              ensure  => $package_ensure,
+              ensure => $package_ensure,
             }
           }
         }
