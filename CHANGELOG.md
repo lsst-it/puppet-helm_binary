@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.1.0](https://github.com/lsst-it/puppet-helm_binary/tree/v3.1.0) (2025-04-01)
+
+[Full Changelog](https://github.com/lsst-it/puppet-helm_binary/compare/v3.0.0...v3.1.0)
+
+**Implemented enhancements:**
+
+- bump apt version constraint to inlude 10.x.x [\#30](https://github.com/lsst-it/puppet-helm_binary/pull/30) ([badenerb](https://github.com/badenerb))
+
 ## [v3.0.0](https://github.com/lsst-it/puppet-helm_binary/tree/v3.0.0) (2024-06-28)
 
 [Full Changelog](https://github.com/lsst-it/puppet-helm_binary/compare/v2.1.0...v3.0.0)
