@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v3.2.0](https://github.com/lsst-it/puppet-helm_binary/tree/v3.2.0) (2025-10-24)
+
+[Full Changelog](https://github.com/lsst-it/puppet-helm_binary/compare/v3.1.0...v3.2.0)
+
+**Implemented enhancements:**
+
+- \(metadata.json\) bump archiver constraint to inlude 9 [\#43](https://github.com/lsst-it/puppet-helm_binary/pull/43) ([badenerb](https://github.com/badenerb))
+- Update actions/checkout action to v5 [\#36](https://github.com/lsst-it/puppet-helm_binary/pull/36) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [v3.1.0](https://github.com/lsst-it/puppet-helm_binary/tree/v3.1.0) (2025-04-01)
 
 [Full Changelog](https://github.com/lsst-it/puppet-helm_binary/compare/v3.0.0...v3.1.0)
